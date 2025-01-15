@@ -56,17 +56,17 @@ p {
         filter: drop-shadow(5px 5px 2px #000);
     }
     25% { 
-        transform: scale(1.01) rotate(-1deg); 
+        transform: scale(1.01) rotate(-0.5deg); 
         -webkit-filter: drop-shadow(7px 7px 4px #000);
         filter: drop-shadow(7px 7px 4px #000);
     }
     50% { 
-        transform: scale(1.01) rotate(1deg); 
+        transform: scale(1.01) rotate(0.5deg); 
         -webkit-filter: drop-shadow(7px 7px 4px #000);
         filter: drop-shadow(7px 7px 4px #000);
     }
     75% { 
-        transform: scale(1.01) rotate(-1deg); 
+        transform: scale(1.01) rotate(-0.5deg); 
         -webkit-filter: drop-shadow(7px 7px 4px #000);
         filter: drop-shadow(7px 7px 4px #000);
     }
