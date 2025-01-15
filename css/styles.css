@@ -189,8 +189,7 @@ a:link {
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
 }
 
 .press-links {
@@ -251,7 +250,7 @@ a:link {
     color: var(--text-color);
     background-color: var(--main-bg-color);
     padding: 1rem;
-    margin-top: 2rem;
+    margin-top: calc(4rem + var(--drop-shadow-size));
 }
 
 .footer a {
