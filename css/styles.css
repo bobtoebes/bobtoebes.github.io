@@ -1,57 +1,58 @@
-@font-face {
-    font-family: 'OutOfTune';
-    src: url('fonts/out_of_tune.ttf') format('truetype');
-}
-
-ul,
-p {
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --main-bg-color: #191919;
     --menu-text-color: #FF7006;
     --text-color: #FF7006;
     --header-color: #FF7006;
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Poppins', serif;
     --header-font-family: 'Bebas Neue', serif;
-    --font-family: "Poppins", serif;
+    --drop-shadow-size: 10px;
 }
 
 * {
     box-sizing: border-box;
 }
 
-h1,
-h2,
-header {
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 4rem calc(1rem + var(--drop-shadow-size));
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: calc(4rem + var(--drop-shadow-size));
+}
+
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
     font-family: var(--header-font-family);
     color: var(--header-color);
-    margin: 0px;
+    margin: 0;
     font-weight: 600;
-    -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.2));
     filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.2));
 }
 
 p {
-    font-family: var(--font-family);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--text-color);
 }
 
-body {
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
-    background-color: var(--main-bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    margin-right: 1rem;
-    margin-left: 1rem;
+.logo {
+    width: 100%;
+    padding: 0 2rem calc(4rem - var(--drop-shadow-size));
+    height: auto;
 }
 
 .section {
@@ -59,40 +60,23 @@ body {
     flex-direction: column;
     gap: 1rem;
     background-color: var(--main-bg-color);
-    margin-bottom: 2rem;
-    border-radius: 20px;
     border: 2px solid var(--header-color);
+    border-radius: 20px;
     padding: 2rem;
-    box-shadow: 10px 10px 0px var(--header-color);
+    box-shadow: var(--drop-shadow-size) var(--drop-shadow-size) 0 var(--header-color);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-    /* Smooth transitions for both */
 }
 
 .section:hover {
-    box-shadow: 5px 5px 0px var(--header-color);
-    transform: translateY(5px) translateX(2px);
+    box-shadow: 5px 5px 0 var(--header-color);
+    transform: translate(2px, 5px);
 }
-
 
 .section-title {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-}
-
-main {
-    max-width: 800px;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.logo {
-    height: auto;
-    width: 100%;
-    padding: 4rem;
 }
 
 .video {
@@ -116,18 +100,18 @@ a:link {
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
 }
 
 .social-icons {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    padding: 0;
 }
 
 .social-icons li {
@@ -138,40 +122,22 @@ a:link {
 }
 
 .social-icons a {
-    text-decoration: none;
-    color: var(--text-color);
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
     gap: 0.5rem;
 }
 
-.icon {
-    width: 32px;
-    height: 32px;
-    fill: currentColor;
-}
-
 .gallery {
-    padding: 0;
     overflow: hidden;
-}
-
-.gallery {
     padding: 0;
-    overflow: hidden;
-}
-
-.gallery {
-    padding: 0;
-    overflow: hidden;
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Max 3 items per row */
     align-items: stretch;
-    /* Stretch grid cells to fill height */
 }
 
 .gallery-grid a {
@@ -184,9 +150,7 @@ a:link {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures images crop to fit */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -197,18 +161,14 @@ a:link {
 
 .press-links {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* Space between links */
+    padding: 0;
 }
 
 .press-links li {
-    font-family: var(--font-family);
     font-size: 1rem;
-    color: var(--text-color);
 }
 
 .press-links a {
@@ -219,50 +179,52 @@ a:link {
 
 .press-links a:hover {
     color: #fff;
-    /* Change to white on hover */
     text-decoration: underline;
 }
 
-.gigs-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    /* Space between gigs */
+.gigs-table {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    width: 100%;
 }
 
-.gigs-list li {
-    font-family: var(--font-family);
-    font-size: 1rem;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.gig-row {
+    display: contents;
 }
 
-.gigs-list .gig-date {
+.gig-date {
     font-weight: bold;
     color: var(--header-color);
 }
 
-.gigs-list a {
-    text-decoration: none;
-    color: var(--header-color);
-    transition: color 0.3s ease;
+.gig-info {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
 }
 
-.gigs-list a:hover {
-    color: #fff;
-    /* Change to white on hover */
-    text-decoration: underline;
-}
-
-.gigs-list .past-event {
+.past .gig-date,
+.past .gig-info {
     opacity: 0.5;
-    /* Dim the appearance */
     text-decoration: line-through;
-    /* Strikethrough text */
-    transition: opacity 0.3s ease, text-decoration 0.3s ease;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 4rem 2rem;
+    }
+
+    .gigs-table {
+        grid-template-columns: 1fr;
+    }
+
+    .gig-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .gig-date {
+        margin-bottom: 0.5rem;
+    }
 }
