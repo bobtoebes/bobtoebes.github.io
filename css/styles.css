@@ -101,7 +101,7 @@ p {
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.section:hover {
+.clickable:hover {
     box-shadow: 5px 5px 0 var(--header-color);
     transform: translate(2px, 5px);
 }
