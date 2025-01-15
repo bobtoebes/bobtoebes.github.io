@@ -207,12 +207,15 @@ a:link {
 .press-links a {
     text-decoration: none;
     color: var(--header-color);
-    transition: color 0.3s ease;
+    background-color: transparent;
+    padding: 0;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
 }
 
 .press-links a:hover {
-    color: #fff;
-    text-decoration: underline;
+    background-color: var(--header-color);
+    color: var(--main-bg-color);
+    padding: 0 5px; 
 }
 
 .gigs-table {
