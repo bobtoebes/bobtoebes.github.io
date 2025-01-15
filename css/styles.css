@@ -52,28 +52,28 @@ p {
 @keyframes rotateZoom {
     0% { 
         transform: scale(1) rotate(0deg); 
-        -webkit-filter: drop-shadow(5px 5px 2px #000);
-        filter: drop-shadow(5px 5px 2px #000);
+        -webkit-filter: drop-shadow(5px 5px 3px #0a0a0a);
+        filter: drop-shadow(5px 5px 3px #0a0a0a);
     }
     25% { 
         transform: scale(1.01) rotate(-0.5deg); 
-        -webkit-filter: drop-shadow(7px 7px 4px #000);
-        filter: drop-shadow(7px 7px 4px #000);
+        -webkit-filter: drop-shadow(7px 7px 4px #0a0a0a);
+        filter: drop-shadow(7px 7px 4px #0a0a0a);
     }
     50% { 
         transform: scale(1.01) rotate(0.5deg); 
-        -webkit-filter: drop-shadow(7px 7px 4px #000);
-        filter: drop-shadow(7px 7px 4px #000);
+        -webkit-filter: drop-shadow(7px 7px 4px #0a0a0a);
+        filter: drop-shadow(7px 7px 4px #0a0a0a);
     }
     75% { 
         transform: scale(1.01) rotate(-0.5deg); 
-        -webkit-filter: drop-shadow(7px 7px 4px #000);
-        filter: drop-shadow(7px 7px 4px #000);
+        -webkit-filter: drop-shadow(7px 7px 4px #0a0a0a);
+        filter: drop-shadow(7px 7px 4px #0a0a0a);
     }
     100% { 
         transform: scale(1) rotate(0deg); 
-        -webkit-filter: drop-shadow(5px 5px 2px #000);
-        filter: drop-shadow(5px 5px 2px #000);
+        -webkit-filter: drop-shadow(5px 5px 3px #0a0a0a);
+        filter: drop-shadow(5px 5px 3px #0a0a0a);
     }
 }
 .logo {
@@ -81,8 +81,8 @@ p {
     padding: 0 2rem calc(4rem - var(--drop-shadow-size));
     height: auto;
     transition: transform 0.2s ease-in-out;
-    -webkit-filter: drop-shadow(5px 5px 2px #000);
-    filter: drop-shadow(5px 5px 2px #000);
+    -webkit-filter: drop-shadow(5px 5px 3px #0a0a0a);
+    filter: drop-shadow(5px 5px 3px #0a0a0a);
 }
 
 .logo:hover {
@@ -95,7 +95,7 @@ p {
     gap: 1rem;
     background-color: var(--main-bg-color);
     border: 2px solid var(--header-color);
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 2rem;
     box-shadow: var(--drop-shadow-size) var(--drop-shadow-size) 0 var(--header-color);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
