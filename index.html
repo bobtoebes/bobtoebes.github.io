@@ -36,10 +36,19 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="/css/styles.css">
+
+  <script src="/js/language-switcher.js"></script>
 </head>
 
 
 <body>
+  <div class="language-switch no-select">
+    <select class="language-select">
+      <option value="nl">NL</option>
+      <option value="en">EN</option>
+    </select>
+  </div>
+
   <header class="header no-select">
     <a href="https://oranguthangs.com">
       <img class="logo" src="/img/Orangu_Thangs_Logo.png" alt="Orangu Thangs Logo">
@@ -55,32 +64,65 @@
     </section>
 
     <section class="section">
-      <h2 class="section-title">A hyperenergetic ranting blend of dance-punk, 00's garage and modern post-punk.
-      </h2>
-      <p>
-        A couple of billion years ago, out of the primordial soup a swirling wave of dance punk flooded the
-        eastern parts of our country. It drowned the swampy lands and for some period absolutely nothing
-        happened. Then once upon another later time in history out of the damping creeks, ponds and puddles rose
-        the holy sound of Oost-Gelricana. Five prophets answered the call and formed Orangu Thangs. Since then
-        these five freemasons are on a mission to protect people from poor music taste. Know that when you'll
-        see them, you can try to carelessly stand still and not tap your feet or not nod your head, but thy
-        resistance is futile!
-        <br /><br />
-        In their founding year 2024 Orangu Thangs came, saw, and conquered the Achterhoekse Band Competitie at
-        the DRU in Ulft. This victory earned them a spot at Huntenpop Festival. Afterwards in late 2024, they
-        released their debut single 'Kids Along The Shore' which reached the number 1 spot in the 3voor12
-        Gelderland Top 20 releases of 2024. In January 2025 their next single 'One Trick Pony Police' hit
-        the ether.
-        <br /><br />
-        <strong>Orangu Thangs:</strong>
-      <ul>
-        <li>Davey Wopereis (vocals)</li>
-        <li>Ludo Waenink (guitar)</li>
-        <li>Bob Toebes (guitar)</li>
-        <li>Marnix Flikweert (bass)</li>
-        <li>Cas Huinink (drums)</li>
-      </ul>
-      </p>
+      <!-- English Version -->
+      <div data-lang="en">
+        <h2 class="section-title">A hyperenergetic ranting blend of dance-punk, 00's garage and modern post-punk
+        </h2>
+        <p>
+          A couple of billion years ago, out of the primordial soup a swirling wave of dance punk flooded the
+          eastern parts of our country. It drowned the swampy lands and for some period absolutely nothing
+          happened. Then once upon another later time in history out of the damping creeks, ponds and puddles rose
+          the holy sound of Oost-Gelricana. Five prophets answered the call and formed Orangu Thangs. Since then
+          these five freemasons are on a mission to protect people from poor music taste. Know that when you'll
+          see them, you can try to carelessly stand still and not tap your feet or not nod your head, but thy
+          resistance is futile!
+          <br /><br />
+          In their founding year 2024 Orangu Thangs came, saw, and conquered the Achterhoekse Band Competitie at
+          the DRU in Ulft. This victory earned them a spot at Huntenpop Festival. Afterwards in late 2024, they
+          released their debut single 'Kids Along The Shore' which reached the number 1 spot in the 3voor12
+          Gelderland Top 20 releases of 2024. In January 2025 their next single 'One Trick Pony Police' hit
+          the ether.
+          <br /><br />
+          <strong>Orangu Thangs:</strong>
+        <ul>
+          <li>Davey Wopereis (vocals)</li>
+          <li>Ludo Waenink (guitar)</li>
+          <li>Bob Toebes (guitar)</li>
+          <li>Marnix Flikweert (bass)</li>
+          <li>Cas Huinink (drums)</li>
+        </ul>
+        </p>
+      </div>
+
+      <!-- Dutch Version -->
+      <div data-lang="nl" class="active">
+        <h2 class="section-title">Een hyperactieve foeterende mix van garage, post-punk en dance-punk
+        </h2>
+        <p>
+          Miljarden jaren geleden steeg er uit de oersoep een kolkende vloedgolf van dance-punk op, die neerkletste op
+          het oostelijke deel van ons huidige kikkerlandje. Het hulde het landschap in dampend moerasland en jarenlang
+          gebeurde er niets — tot een moment ergens later in de menselijke geschiedenis. Uit vijvers en beken, sloten en
+          kreken steeg de heilige oerklank Oost-Gelricana op. Vijf profeten gaven gehoor aan de roep en groepeerden zich
+          als Orangu Thangs. Sindsdien zijn deze vrijmetselaars op een missie om de wereld te beschermen tegen slechte
+          muzieksmaak. Weet dat wanneer u ze ziet, u misschien quasi-nonchalant kunt proberen stil te blijven staan of
+          uw voet niet op de maat van de muziek te laten tikken, maar uw weerstand is zinloos.
+          <br /><br />
+          Na hun oprichting in 2024 kwam, zag en overwon Orangu Thangs op de Achterhoekse bandcompetitie bij de DRU in
+          Ulft. Met deze overwinning bemachtigden ze een plek op het Huntenpop Festival. Eind 2024 brachten ze hun
+          debuutsingle Kids Along The Shore uit, waarmee ze de nummer 1-positie in de 3voor12 Gelderland Top 20 Releases
+          van 2024 bereikten. In januari 2025 werd hun tweede single One Trick Pony Police de ether ingeslingerd. In de
+          loop van 2025 zal hun eerste EP worden uitgebracht.
+          <br /><br />
+          <strong>Orangu Thangs:</strong>
+        <ul>
+          <li>Davey Wopereis (zang)</li>
+          <li>Ludo Waenink (gitaar)</li>
+          <li>Bob Toebes (gitaar)</li>
+          <li>Marnix Flikweert (bas)</li>
+          <li>Cas Huinink (drums)</li>
+        </ul>
+        </p>
+      </div>
     </section>
 
     <section class="section gallery no-select">
@@ -108,7 +150,8 @@
 
     <section class="section no-select">
       <div class="section-title">
-        <h2>Gigs</h2>
+        <h2 data-lang="nl" class="active">Shows</h2>
+        <h2 data-lang="en">Gigs</h2>
       </div>
       <div class="gigs-table">
         <div class="gig-row">
@@ -125,6 +168,10 @@
         </div>
         <div class="gig-row">
           <div class="gig-date">7 Juni 2025</div>
+          <div class="gig-info">TBA</div>
+        </div>
+        <div class="gig-row">
+          <div class="gig-date">24 Mei 2025</div>
           <div class="gig-info">TBA</div>
         </div>
         <div class="gig-row">
@@ -152,7 +199,8 @@
 
     <section class="section no-select">
       <div class="section-title">
-        <h2>Music</h2>
+        <h2 data-lang="nl" class="active">Muziek</h2>
+        <h2 data-lang="en">Music</h2>
       </div>
 
       <div class="spotify">
@@ -162,7 +210,8 @@
       </div>
 
       <div class="streaming-services">
-        <p>Available on:</p>
+        <p data-lang="en">Available on:</p>
+        <p data-lang="nl" class="active">Beschikbaar op:</p>
         <ul class="social-icons">
           <li>
             <a href="https://open.spotify.com/artist/29BcktnqXwY4YXi81S9jVN?si=CN47m8MnRJuH1sXTczpqTQ" target="_blank"
@@ -225,7 +274,8 @@
 
     <section class="section no-select">
       <div class="section-title">
-        <h2>Press</h2>
+        <h2 data-lang="nl" class="active">Pers</h2>
+        <h2 data-lang="en">Press</h2>
       </div>
       <ul class="press-links">
         <li>
@@ -271,10 +321,13 @@
 
     <section class="section no-select">
       <h2 class="section-title">Contact</h2>
-      <p>For bookings and inquiries, reach out to us at <a href="mailto:oranguthangs@gmail.com">
+      <p data-lang="en">For bookings and inquiries, reach out to us at <a href="mailto:oranguthangs@gmail.com">
           oranguthangs@gmail.com</a>.</p>
+      <p data-lang="nl" class="active">Voor boekingen en aanvragen kunt u contact met ons opnemen via <a
+          href="mailto:oranguthangs@gmail.com">oranguthangs@gmail.com</a>.</p>
       <div class="socials">
-        <p>Follow us on:</p>
+        <p data-lang="en">Follow us on:</p>
+        <p data-lang="nl" class="active">Volgs ons op:</p>
         <ul class="social-icons">
           <li>
             <a href="https://instagram.com/oranguthangsband" target="_blank" rel="noopener noreferrer"
