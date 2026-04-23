@@ -148,6 +148,17 @@ p {
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.section.fade-in {
+    opacity: 0;
+    translate: 0 24px;
+    transition: opacity 0.6s ease, translate 0.6s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.section.fade-in.visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
 .clickable:hover {
     box-shadow: 5px 5px 0 var(--header-color);
     transform: translate(2px, 5px);
@@ -326,6 +337,70 @@ a:link {
 ::-moz-selection {
     background-color: var(--text-color); 
     color: var(--main-bg-color);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--main-bg-color); }
+::-webkit-scrollbar-thumb { background: var(--header-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #ff9133; }
+
+/* Gig separator */
+.gig-separator {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.4;
+    padding: 0.25rem 0;
+}
+
+.gig-separator::before,
+.gig-separator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--header-color);
+}
+
+.gig-separator span {
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    color: var(--header-color);
+    letter-spacing: 0.25em;
+    white-space: nowrap;
+}
+
+/* Gallery hover overlay */
+.gallery-grid a {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-grid a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-grid a:hover::after {
+    opacity: 1;
+}
+
+/* Social icon circle hover */
+.social-icons .icon {
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, fill 0.2s ease;
+}
+
+.social-icons a:hover .icon {
+    background-color: var(--header-color);
+    fill: var(--main-bg-color);
 }
 
 @media (max-width: 800px) {
